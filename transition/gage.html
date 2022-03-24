@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gage paractice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gage_wrap {
+            width: 400px;
+            height: 100px;
+            border: 3px solid navy;
+            margin: 100px auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .gage {
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: navy;
+            transition-duration: 1s;
+        }
+
+        .gage_wrap h3 {
+            color: black;
+            position: relative;
+            text-align: center;
+            line-height: 100px;
+            font-size: 26px;
+        }
+
+        .gage_wrap:hover .gage {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gage_wrap">
+        <div class="gage"></div>
+        <h3>더 보기 &rarr;</h3>
+    </div>
+</body>
+
+</html>

@@ -6,10 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>transition practice</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            /* 일반적으로 직접적인 엘리먼트에 transition을 많이 거는 편이다 */
+            transition-duration: 1s;
+            /* transition-delay: 1s; */
+
+            /* effect가 천천히 시작하고 천천히 끝나게 함 */
+            transition-timing-function: ease-in-out;
+        }
+
+        .box:hover {
+            background-color: gold;
+            /* 직접적인 element에 transition-duration 주는 이유? hover했을시에 속성을 주면, 마우스를 뗐을때 확 변해버림. */
+            width: 300px;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div class="box"></div>
 </body>
 
 </html>
