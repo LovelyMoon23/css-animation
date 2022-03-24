@@ -6,10 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyframe practice</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            animation-name: box-ani;
+            animation-duration: 1s;
+            /* 애니메이션 반복 횟수 */
+            animation-iteration-count: 2;
+            /* animation-iteration-count: infinite;  무한반복*/
+
+            /* 반복하는데 어색함없이 하려면 animation-iteration-count와 함께 사용 */
+            animation-direction: alternate;
+
+            /* 에니메이션 시작 시간 딜레이 시킴 */
+            /* animation-delay: 1s; */
+
+            /* 에니메이션 움직임의 가속도 일정하게 만든다 */
+            /* 만약 가속도를 조정하고 싶으면 아래 기입하고 개발자도구로 스타일 클릭해서 보면 cubic-bezier를 마음대로 설정할 수 있음 */
+            animation-timing-function: linear;
+
+            /* 애니메이션의 동작이 끝나면 시작점이 아닌, 애니메이션이 마지막에 위치한 곳에 위치시킴  */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes box-ani {
+            from {
+                margin-left: 0;
+            }
+
+            to {
+                margin-left: 200px
+            }
+        }
+    </style>
 </head>
 
 <body>
-
+    <div class="box"></div>
 </body>
 
 </html>
